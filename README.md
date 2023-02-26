@@ -1,3 +1,3 @@
-# aosp_builder_container
+# Docker file for create Android Development Server
 
-lalalala
+That's all
