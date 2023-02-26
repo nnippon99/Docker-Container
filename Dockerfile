@@ -24,7 +24,7 @@ RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y openssh-server screen py
 build-essential curl flex g++-multilib gcc-multilib gnupg gperf imagemagick lib32ncurses-dev \
 lib32readline-dev lib32z1-dev  liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev \
 libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc yasm zip zlib1g-dev \
-libtinfo5 libncurses5 mosh tmux xattr nano wget locales ncdu zsh
+libtinfo5 libncurses5 mosh tmux xattr nano wget locales ncdu zsh unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract file-roller device-tree-compiler liblzma-dev brotli liblz4-tool axel gawk aria2 detox cpio rename build-essential simg2img default-jre bc curl libstdc++6 git wget gcc clang libssl-dev rsync flex bison ccache openjdk-17-jdk expect neofetch tmux tmate libncurses5 lib32readline-dev libwxgtk3.0-gtk3-dev protobuf-compiler adb autoconf automake cmake expat fastboot g++ g++-multilib gcc-multilib gnupg gperf htop imagemagick lib32ncurses5-dev lib32z1-dev libtinfo5 libc6-dev libcap-dev libexpat1-dev libgmp-dev '^liblz4-.*' '^liblzma.*' libmpc-dev libmpfr-dev libncurses5-dev libsdl1.2-dev libxml2 libxml2-utils '^lzma.*' lzop maven ncftp ncurses-dev patch patchelf pkg-config pngcrush pngquant python2 python2.7 python3 python-all-dev re2c schedtool squashfs-tools subversion texinfo w3m xsltproc zlib1g-dev lzip libxml-simple-perl libswitch-perl apt-utils lz4 python3-pip
 
 RUN sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen && \
     locale-gen
@@ -57,6 +57,6 @@ RUN chmod a+x /usr/local/bin/repo
 
 # Create a directory which we will be use as straoge
 #RUN mkdir /home/$username/container-ssd && chown $userid:$groupid /home/$username/container-ssd && chmod ug+s /home/$username/container-ssd
-RUN mkdir /root/aosp && mkdir /root/aosp/segawa && mkdir /root/aosp/Batuhantrkgl && mkdir /root/aosp/Atharv && mkdir /root/aosp/LouayebDev  
+RUN mkdir /root/aosp && mkdir /root/aosp/nippon 
 RUN echo 'echo "ccache, packages, files, configurations and other things outside of /root/aosp.* will be deleted while changing containers. please save everything project related on /root/aosp."'  > /etc/profile.d/welcome.sh
 CMD ["/usr/sbin/sshd", "-D"]
