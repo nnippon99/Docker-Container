@@ -57,6 +57,6 @@ RUN chmod a+x /usr/local/bin/repo
 
 # Create a directory which we will be use as straoge
 #RUN mkdir /home/$username/container-ssd && chown $userid:$groupid /home/$username/container-ssd && chmod ug+s /home/$username/container-ssd
-RUN mkdir /root/aosp.sata && mkdir /root/aosp.nvme && mkdir /root/aosp.nvme/Batuhantrkgl && mkdir /root/aosp.sata/Batuhantrkgl && mkdir /root/aosp.nvme/segawa && mkdir /root/aosp.sata/segawa
-RUN echo 'echo "ccache, packages, files, configurations and other things outside of /root/aosp.* will be deleted while changing containers. please save everything project related on /root/aosp.*"'  > /etc/profile.d/welcome.sh
+RUN mkdir /root/aosp && mkdir /root/aosp/segawa && mkdir /root/aosp/Batuhantrkgl && mkdir /root/aosp/Atharv && mkdir /root/aosp/LouayebDev  
+RUN echo 'echo "ccache, packages, files, configurations and other things outside of /root/aosp.* will be deleted while changing containers. please save everything project related on /root/aosp."'  > /etc/profile.d/welcome.sh
 CMD ["/usr/sbin/sshd", "-D"]
