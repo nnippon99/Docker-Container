@@ -1,5 +1,5 @@
 # Originally from: https://android-review.googlesource.com/c/platform/build/+/1161367
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 #ARG userid=1000
 #ARG groupid=1000
 #ARG username=build
@@ -57,6 +57,6 @@ RUN chmod a+x /usr/local/bin/repo
 
 # Create a directory which we will be use as straoge
 #RUN mkdir /home/$username/container-ssd && chown $userid:$groupid /home/$username/container-ssd && chmod ug+s /home/$username/container-ssd
-RUN mkdir /root/aosp && mkdir /root/aosp/nippon 
+RUN mkdir /root/aosp && mkdir /root/aosp/nippon
 RUN echo 'echo "ccache, packages, files, configurations and other things outside of /root/aosp.* will be deleted while changing containers. please save everything project related on /root/aosp."'  > /etc/profile.d/welcome.sh
 CMD ["/usr/sbin/sshd", "-D"]
